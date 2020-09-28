@@ -1,4 +1,4 @@
-## Wonyoung Jung (@Phantomn)
+## SeungPyo Hong (@Phantomn)
 
 [![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://Phantomn.github.io/)](https://Phantomn.github.io/)
 [![Twitter Badge](https://img.shields.io/badge/-@Ph4nt0mm-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/Ph4nt0mm)](https://twitter.com/Ph4nt0mm)
