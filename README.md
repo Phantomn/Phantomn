@@ -7,8 +7,6 @@
 [![GitHub followers](https://img.shields.io/github/followers/Phantomn.svg?style=flat-square&label=Followers&maxAge=2592000)](https://github.com/Phantomn?tab=followers)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FPhantomn&count_bg=%233D69C8&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/lighttpd/lighttpd1.4.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/lighttpd/lighttpd1.4/alerts/)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/lighttpd/lighttpd1.4.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/lighttpd/lighttpd1.4/alerts/)
-
 
 
 ### 🔭 I’m currently working on ...
