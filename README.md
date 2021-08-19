@@ -10,7 +10,8 @@
 
 
 ### 🔭 I’m currently working on ...
-  - A3Security Pentester (20.06 ~)
+  - Core Security OT/ICS Security Researcher(21.06 ~)
+  - A3Security Pentester (20.06 ~ 21.06)
 ### 🌱 I’m currently learning ...
   - Finding 0-day
   - Exploiting 1-day
