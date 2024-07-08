@@ -1,14 +1,5 @@
 ## SeungPyo Hong (@Phantomn)
 
-[![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://Phantomn.github.io/)](https://Phantomn.github.io/)
-[![Twitter Badge](https://img.shields.io/badge/-@Ph4nt0mm-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/Ph4nt0mm)](https://twitter.com/Ph4nt0mm)
-[![Facebook Badge](https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/Ph4ntomn)](https://www.facebook.com/Ph4ntomn)
-[![Mail Badge](https://img.shields.io/badge/Contact-newbiepwner%40kakao.com-blue?style=flat-square)](mailto:newbiepwner@kakao.com)
-[![GitHub followers](https://img.shields.io/github/followers/Phantomn.svg?style=flat-square&label=Followers&maxAge=2592000)](https://github.com/Phantomn?tab=followers)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FPhantomn&count_bg=%233D69C8&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
-- <img align='left' src="https://profile-counter.glitch.me/phantomn/count.svg" width="200">
-![](https://github-profile-trophy.vercel.app/?username=phantomn&column=7&margin-w=15&margin-h=15)
-
 ### 🔭 I’m currently working on ...
   - Core Security OT/ICS Security Researcher(21.06 ~)
   - A3Security Pentester (20.06 ~ 21.06)
@@ -20,7 +11,14 @@
 
 
 [![Phantomn's github stats](https://github-readme-stats.vercel.app/api?username=Phantomn)](https://github.com/anuraghazra/github-readme-stats)
-
+[![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://Phantomn.github.io/)](https://Phantomn.github.io/)
+[![Twitter Badge](https://img.shields.io/badge/-@Ph4nt0mm-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/Ph4nt0mm)](https://twitter.com/Ph4nt0mm)
+[![Facebook Badge](https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/Ph4ntomn)](https://www.facebook.com/Ph4ntomn)
+[![Mail Badge](https://img.shields.io/badge/Contact-newbiepwner%40kakao.com-blue?style=flat-square)](mailto:newbiepwner@kakao.com)
+[![GitHub followers](https://img.shields.io/github/followers/Phantomn.svg?style=flat-square&label=Followers&maxAge=2592000)](https://github.com/Phantomn?tab=followers)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FPhantomn&count_bg=%233D69C8&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
+- <img align='left' src="https://profile-counter.glitch.me/phantomn/count.svg" width="200">
+![](https://github-profile-trophy.vercel.app/?username=phantomn&column=7&margin-w=15&margin-h=15)
 <!--
 **Phantomn/Phantomn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
