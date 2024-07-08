@@ -1,3 +1,8 @@
+[![Portfolio](https://img.shields.io/badge/-Portfolio-black?style=flat-square&logo=github&link=https://nt.ph4nt0m.xyz/)](https://nt.ph4nt0m.xyz/)
+[![Twitter Badge](https://img.shields.io/badge/-@Ph4nt0mm-1ca0f1?style=flat-square&logo=x&link=https://twitter.com/Ph4nt0mm)](https://twitter.com/Ph4nt0mm)
+[![Facebook Badge](https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/Ph4ntomn)](https://www.facebook.com/Ph4ntomn)
+[![Mail Badge](https://img.shields.io/badge/Contact-newbiepwner%40kakao.com-blue?style=flat-square)](mailto:newbiepwner@kakao.com)
+
 ## SeungPyo Hong (@Phantomn)
 
 ### 🔭 I’m currently working on ...
@@ -11,11 +16,6 @@
 
 [![Phantomn's github stats](https://github-readme-stats.vercel.app/api?username=Phantomn)](https://github.com/anuraghazra/github-readme-stats)
 
-
-[![Portfolio](https://img.shields.io/badge/-Portfolio-black?style=flat-square&logo=github&link=https://nt.ph4nt0m.xyz/)](https://nt.ph4nt0m.xyz/)
-[![Twitter Badge](https://img.shields.io/badge/-@Ph4nt0mm-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/Ph4nt0mm)](https://twitter.com/Ph4nt0mm)
-[![Facebook Badge](https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/Ph4ntomn)](https://www.facebook.com/Ph4ntomn)
-[![Mail Badge](https://img.shields.io/badge/Contact-newbiepwner%40kakao.com-blue?style=flat-square)](mailto:newbiepwner@kakao.com)
 ![](https://github-profile-trophy.vercel.app/?username=phantomn&column=7&margin-w=15&margin-h=15)
 
 
