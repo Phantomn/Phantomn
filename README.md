@@ -2,6 +2,7 @@
 [![Twitter Badge](https://img.shields.io/badge/-@Ph4nt0mm-1ca0f1?style=flat-square&logo=x&link=https://twitter.com/Ph4nt0mm)](https://twitter.com/Ph4nt0mm)
 [![Facebook Badge](https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/Ph4ntomn)](https://www.facebook.com/Ph4ntomn)
 [![Mail Badge](https://img.shields.io/badge/Contact-newbiepwner%40kakao.com-blue?style=flat-square)](mailto:newbiepwner@kakao.com)
+[![DeepSource](https://app.deepsource.com/gh/Phantomn/netperf.svg/?label=code+coverage&show_trend=true&token=nzTsQRqbaw4Gy8p-_IwLFyUF)](https://app.deepsource.com/gh/Phantomn/netperf/)
 
 ## SeungPyo Hong (@Phantomn)
 
