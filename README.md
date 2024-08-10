@@ -1,4 +1,4 @@
-[![Portfolio](https://img.shields.io/badge/-Portfolio-black?style=flat-square&logo=github&link=https://nt.ph4nt0m.xyz/)](https://nt.ph4nt0m.xyz/)
+[![Portfolio](https://img.shields.io/badge/-Portfolio-black?style=flat-square&logo=github&link=https://ph4nt0mm.notion.site)](https://ph4nt0mm.notion.site)
 [![Twitter Badge](https://img.shields.io/badge/-@Ph4nt0mm-1ca0f1?style=flat-square&logo=x&link=https://twitter.com/Ph4nt0mm)](https://twitter.com/Ph4nt0mm)
 [![Facebook Badge](https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/Ph4ntomn)](https://www.facebook.com/Ph4ntomn)
 [![Mail Badge](https://img.shields.io/badge/Contact-newbiepwner%40kakao.com-blue?style=flat-square)](mailto:newbiepwner@kakao.com)
