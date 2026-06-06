@@ -16,8 +16,6 @@
 - 발견한 취약점을 재현 가능한 기법과 실전형 분석으로 정리하는 일을 중요하게 생각합니다.
 
 ## 주요 내용
-- CoreSecurity ICS 보안 연구자
-- CVE 21건 보유
 - NATO CCDCOE Locked Shields 2025 DFIR CTF 1위
 - NATO CCDCOE Locked Shields 2026 Special System 9위
 - MCP + A2A, n8n, RAG, pgvector 기반 AI 보안 자동화 연구
