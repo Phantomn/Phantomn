@@ -1,0 +1,44 @@
+name: Update README cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Generate profile cards
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p profile
+
+          curl -fsSL --retry 3 --retry-delay 5 \
+            "https://github-readme-stats.vercel.app/api?username=Phantomn&show_icons=true&count_private=true&hide_border=true&theme=transparent" \
+            -o profile/stats.svg
+
+          curl -fsSL --retry 3 --retry-delay 5 \
+            "https://github-readme-stats.vercel.app/api/top-langs/?username=Phantomn&layout=compact&hide_border=true&theme=transparent" \
+            -o profile/top-langs.svg
+
+          curl -fsSL --retry 3 --retry-delay 5 \
+            "https://streak-stats.demolab.com/?user=Phantomn&hide_border=true&theme=transparent" \
+            -o profile/streak.svg
+
+      - name: Commit generated cards
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "chore: update profile cards" || exit 0
+          git push

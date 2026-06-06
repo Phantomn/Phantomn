@@ -52,9 +52,9 @@
 
 ## GitHub 통계
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Phantomn&show_icons=true&count_private=true&hide_border=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Phantomn&layout=compact&hide_border=true" height="165" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Phantomn&hide_border=true" height="165" />
+  <img src="./profile/stats.svg" height="165" />
+  <img src="./profile/top-langs.svg" height="165" />
+  <img src="./profile/streak.svg" height="165" />
 </div>
 
 ## 연락처

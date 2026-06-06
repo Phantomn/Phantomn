@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="165" viewBox="0 0 495 165" role="img" aria-label="Top languages placeholder">
+  <rect width="100%" height="100%" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="24" y="44" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="22" font-weight="700">Top Languages</text>
+  <text x="24" y="78" fill="#8b949e" font-family="Arial, sans-serif" font-size="14">Generating via GitHub Actions</text>
+  <text x="24" y="108" fill="#58a6ff" font-family="Arial, sans-serif" font-size="13">Phantomn</text>
+</svg>
