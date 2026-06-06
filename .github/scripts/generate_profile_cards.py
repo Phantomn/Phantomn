@@ -67,7 +67,7 @@ def render_stats(user, repos):
     lines = [
         '<rect x="18" y="18" width="106" height="129" rx="12" fill="#071A1A" stroke="#E4E2E2" />',
         '<rect x="18" y="18" width="106" height="5" rx="2.5" fill="#2F97C1" />',
-        '<text x="32" y="48" fill="#0CF574" font-family="Arial, sans-serif" font-size="11" font-weight="700">GITHUB SUMMARY</text>',
+        '<text x="32" y="48" fill="#0CF574" font-family="Arial, sans-serif" font-size="10" font-weight="700">SUMMARY</text>',
         '<text x="32" y="76" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="18" font-weight="700">Public</text>',
         '<text x="32" y="96" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="18" font-weight="700">Activity</text>',
         f'<text x="32" y="122" fill="#0CF574" font-family="Arial, sans-serif" font-size="10">Updated {svg_escape(updated)}</text>',
@@ -83,7 +83,7 @@ def render_stats(user, repos):
         lines.append(f'<rect x="{x}" y="{y}" width="162" height="55" rx="12" fill="#071A1A" stroke="#E4E2E2" />')
         lines.append(f'<text x="{x + 14}" y="{y + 19}" fill="#0CF574" font-family="Arial, sans-serif" font-size="11">{svg_escape(label)}</text>')
         lines.append(f'<text x="{x + 14}" y="{y + 41}" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="22" font-weight="700">{svg_escape(value)}</text>')
-    lines.append('<text x="144" y="150" fill="#0CF574" font-family="Arial, sans-serif" font-size="10">Public GitHub data · generated locally</text>')
+    lines.append('<text x="144" y="150" fill="#0CF574" font-family="Arial, sans-serif" font-size="10">GitHub API data</text>')
     return "\n  ".join(lines)
 
 
