@@ -54,18 +54,15 @@
 ## 활동 통계
 <table align="center" cellspacing="12" cellpadding="0">
   <tr>
-    <td>
+    <td align="center">
       <img src="./profile/stats.svg" height="165" />
     </td>
-    <td>
-      <img src="./profile/top-langs.svg" height="165" />
-    </td>
   </tr>
   <tr>
-    <td colspan="2" height="10"></td>
+    <td height="10"></td>
   </tr>
   <tr>
-    <td colspan="2" align="center">
+    <td align="center">
       <img src="./profile/streak.svg" height="165" />
     </td>
   </tr>

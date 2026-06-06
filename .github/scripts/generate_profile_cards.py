@@ -3,7 +3,6 @@ import json
 import os
 import pathlib
 import urllib.request
-from collections import defaultdict
 
 
 USERNAME = os.getenv("PROFILE_USERNAME", "Phantomn")
@@ -88,41 +87,12 @@ def render_stats(user, repos):
     return "\n  ".join(lines)
 
 
-def render_langs(lang_totals):
-    total = sum(lang_totals.values()) or 1
-    top = sorted(lang_totals.items(), key=lambda kv: kv[1], reverse=True)[:3]
-    lines = [
-        '<text x="24" y="38" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="20" font-weight="700">Top Languages</text>',
-        f'<text x="24" y="68" fill="#0CF574" font-family="Arial, sans-serif" font-size="12">Public repos by language</text>',
-    ]
-    y = 92
-    palette = ["#2F97C1", "#0CF574", "#F5B700"]
-    for idx, (lang, count) in enumerate(top):
-        pct = count / total
-        bar_w = int(242 * pct)
-        color = palette[idx % len(palette)]
-        lines.append(f'<text x="24" y="{y}" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="12">{svg_escape(lang)}</text>')
-        lines.append(f'<rect x="110" y="{y-10}" width="242" height="10" rx="5" fill="#071A1A" stroke="#E4E2E2" />')
-        lines.append(f'<rect x="110" y="{y-10}" width="{max(bar_w, 6)}" height="10" rx="5" fill="{color}" />')
-        lines.append(f'<text x="374" y="{y}" fill="#0CF574" font-family="Arial, sans-serif" font-size="12">{pct*100:.1f}%</text>')
-        y += 20
-    lines.append(f'<text x="24" y="158" fill="#0CF574" font-family="Arial, sans-serif" font-size="11">Repos analyzed: {sum(lang_totals.values()):,}</text>')
-    return "\n  ".join(lines)
-
-
 def main():
     user = github_get(f"/users/{USERNAME}")
     repos = paginated_get(f"/users/{USERNAME}/repos?type=owner&sort=updated&direction=desc", limit_pages=2)
     repos = [r for r in repos if not r.get("fork")]
 
-    lang_totals = defaultdict(int)
-    for repo in repos:
-        lang = repo.get("language")
-        if lang:
-            lang_totals[lang] += 1
-
     write_svg(OUT_DIR / "stats.svg", render_stats(user, repos))
-    write_svg(OUT_DIR / "top-langs.svg", render_langs(lang_totals))
 
 
 if __name__ == "__main__":
