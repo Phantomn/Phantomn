@@ -67,8 +67,12 @@ def render_stats(user, repos):
     stars = sum(r.get("stargazers_count", 0) for r in repos if not r.get("fork"))
     updated = user.get("updated_at", "")[:10]
     lines = [
-        '<text x="24" y="38" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Stats</text>',
-        f'<text x="24" y="68" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Updated {svg_escape(updated)}</text>',
+        '<rect x="18" y="18" width="106" height="129" rx="12" fill="#11161c" stroke="#30363d" />',
+        '<rect x="18" y="18" width="106" height="5" rx="2.5" fill="#58a6ff" />',
+        '<text x="32" y="48" fill="#8b949e" font-family="Arial, sans-serif" font-size="11" font-weight="700">PROFILE SNAPSHOT</text>',
+        '<text x="32" y="76" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="18" font-weight="700">GitHub</text>',
+        '<text x="32" y="96" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="18" font-weight="700">Activity</text>',
+        f'<text x="32" y="122" fill="#8b949e" font-family="Arial, sans-serif" font-size="10">Updated {svg_escape(updated)}</text>',
     ]
     metrics = [
         ("Public Repos", str(public_repos)),
@@ -76,13 +80,12 @@ def render_stats(user, repos):
         ("Following", str(following)),
         ("Repo Stars", str(stars)),
     ]
-    card_w = 214
-    card_h = 36
-    positions = [(24, 86), (257, 86), (24, 126), (257, 126)]
+    positions = [(144, 18), (315, 18), (144, 79), (315, 79)]
     for (label, value), (x, y) in zip(metrics, positions):
-        lines.append(f'<rect x="{x}" y="{y}" width="{card_w}" height="{card_h}" rx="8" fill="#161b22" stroke="#30363d" />')
-        lines.append(f'<text x="{x + 12}" y="{y + 14}" fill="#58a6ff" font-family="Arial, sans-serif" font-size="11">{svg_escape(label)}</text>')
-        lines.append(f'<text x="{x + 12}" y="{y + 28}" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="15" font-weight="700">{svg_escape(value)}</text>')
+        lines.append(f'<rect x="{x}" y="{y}" width="162" height="55" rx="12" fill="#11161c" stroke="#30363d" />')
+        lines.append(f'<text x="{x + 14}" y="{y + 19}" fill="#8b949e" font-family="Arial, sans-serif" font-size="11">{svg_escape(label)}</text>')
+        lines.append(f'<text x="{x + 14}" y="{y + 41}" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="22" font-weight="700">{svg_escape(value)}</text>')
+    lines.append('<text x="144" y="150" fill="#8b949e" font-family="Arial, sans-serif" font-size="10">Public profile only · generated from GitHub API</text>')
     return "\n  ".join(lines)
 
 
