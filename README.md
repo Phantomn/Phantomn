@@ -17,12 +17,11 @@
 
 ## 주요 내용
 - CoreSecurity ICS 보안 연구자
-- CVE 21건 보유
 - NATO CCDCOE Locked Shields 2025 DFIR CTF 1위
 - NATO CCDCOE Locked Shields 2026 Special System 9위
 
 <details>
-<summary>취약점 목록</summary>
+<summary>CVEs</summary>
 
 ### OS Kernel
 - CVE-2019-18885
