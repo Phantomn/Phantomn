@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="495" height="165" viewBox="0 0 495 165" role="img">
   <rect width="100%" height="100%" rx="8" fill="#040F0F" stroke="#E4E2E2"/>
   <text x="24" y="38" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="20" font-weight="700">Top Languages</text>
-  <text x="24" y="68" fill="#0CF574" font-family="Arial, sans-serif" font-size="12">By repository count across public repositories</text>
+  <text x="24" y="68" fill="#0CF574" font-family="Arial, sans-serif" font-size="12">Public repos by language</text>
   <text x="24" y="92" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="12">Python</text>
   <rect x="110" y="82" width="242" height="10" rx="5" fill="#071A1A" stroke="#E4E2E2" />
   <rect x="110" y="82" width="85" height="10" rx="5" fill="#2F97C1" />
@@ -14,5 +14,5 @@
   <rect x="110" y="122" width="242" height="10" rx="5" fill="#071A1A" stroke="#E4E2E2" />
   <rect x="110" y="122" width="26" height="10" rx="5" fill="#F5B700" />
   <text x="374" y="132" fill="#0CF574" font-family="Arial, sans-serif" font-size="12">10.8%</text>
-  <text x="24" y="158" fill="#0CF574" font-family="Arial, sans-serif" font-size="11">Total repositories analyzed: 37</text>
+  <text x="24" y="158" fill="#0CF574" font-family="Arial, sans-serif" font-size="11">Repos analyzed: 37</text>
 </svg>

@@ -68,23 +68,23 @@ def render_stats(user, repos):
     lines = [
         '<rect x="18" y="18" width="106" height="129" rx="12" fill="#071A1A" stroke="#E4E2E2" />',
         '<rect x="18" y="18" width="106" height="5" rx="2.5" fill="#2F97C1" />',
-        '<text x="32" y="48" fill="#0CF574" font-family="Arial, sans-serif" font-size="11" font-weight="700">PROFILE SNAPSHOT</text>',
-        '<text x="32" y="76" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="18" font-weight="700">GitHub</text>',
+        '<text x="32" y="48" fill="#0CF574" font-family="Arial, sans-serif" font-size="11" font-weight="700">GITHUB SUMMARY</text>',
+        '<text x="32" y="76" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="18" font-weight="700">Public</text>',
         '<text x="32" y="96" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="18" font-weight="700">Activity</text>',
         f'<text x="32" y="122" fill="#0CF574" font-family="Arial, sans-serif" font-size="10">Updated {svg_escape(updated)}</text>',
     ]
     metrics = [
-        ("Public Repos", str(public_repos)),
+        ("Repos", str(public_repos)),
         ("Followers", str(followers)),
         ("Following", str(following)),
-        ("Repo Stars", str(stars)),
+        ("Stars", str(stars)),
     ]
     positions = [(144, 18), (315, 18), (144, 79), (315, 79)]
     for (label, value), (x, y) in zip(metrics, positions):
         lines.append(f'<rect x="{x}" y="{y}" width="162" height="55" rx="12" fill="#071A1A" stroke="#E4E2E2" />')
         lines.append(f'<text x="{x + 14}" y="{y + 19}" fill="#0CF574" font-family="Arial, sans-serif" font-size="11">{svg_escape(label)}</text>')
         lines.append(f'<text x="{x + 14}" y="{y + 41}" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="22" font-weight="700">{svg_escape(value)}</text>')
-    lines.append('<text x="144" y="150" fill="#0CF574" font-family="Arial, sans-serif" font-size="10">Public profile only · generated from GitHub API</text>')
+    lines.append('<text x="144" y="150" fill="#0CF574" font-family="Arial, sans-serif" font-size="10">Public GitHub data · generated locally</text>')
     return "\n  ".join(lines)
 
 
@@ -93,7 +93,7 @@ def render_langs(lang_totals):
     top = sorted(lang_totals.items(), key=lambda kv: kv[1], reverse=True)[:3]
     lines = [
         '<text x="24" y="38" fill="#E4E2E2" font-family="Arial, sans-serif" font-size="20" font-weight="700">Top Languages</text>',
-        f'<text x="24" y="68" fill="#0CF574" font-family="Arial, sans-serif" font-size="12">By repository count across public repositories</text>',
+        f'<text x="24" y="68" fill="#0CF574" font-family="Arial, sans-serif" font-size="12">Public repos by language</text>',
     ]
     y = 92
     palette = ["#2F97C1", "#0CF574", "#F5B700"]
@@ -106,7 +106,7 @@ def render_langs(lang_totals):
         lines.append(f'<rect x="110" y="{y-10}" width="{max(bar_w, 6)}" height="10" rx="5" fill="{color}" />')
         lines.append(f'<text x="374" y="{y}" fill="#0CF574" font-family="Arial, sans-serif" font-size="12">{pct*100:.1f}%</text>')
         y += 20
-    lines.append(f'<text x="24" y="158" fill="#0CF574" font-family="Arial, sans-serif" font-size="11">Total repositories analyzed: {sum(lang_totals.values()):,}</text>')
+    lines.append(f'<text x="24" y="158" fill="#0CF574" font-family="Arial, sans-serif" font-size="11">Repos analyzed: {sum(lang_totals.values()):,}</text>')
     return "\n  ".join(lines)
 
 
