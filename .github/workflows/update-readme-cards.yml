@@ -21,6 +21,20 @@ jobs:
       - name: Generate profile cards
         run: python .github/scripts/generate_profile_cards.py
 
+      - name: Fetch official streak card
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmp="profile/streak.svg.tmp"
+          if curl -fsSL --retry 5 --retry-delay 5 \
+            "https://streak-stats.demolab.com/?user=Phantomn&theme=blue-green&hide_border=true" \
+            -o "$tmp"; then
+            mv "$tmp" profile/streak.svg
+          else
+            rm -f "$tmp"
+            echo "Keeping existing streak.svg"
+          fi
+
       - name: Commit generated cards
         shell: bash
         run: |
