@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="495" height="165" viewBox="0 0 495 165" role="img" aria-label="Streak placeholder">
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="165" viewBox="0 0 495 165" role="img">
   <rect width="100%" height="100%" rx="8" fill="#0d1117" stroke="#30363d"/>
-  <text x="24" y="44" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="22" font-weight="700">GitHub Streak</text>
-  <text x="24" y="78" fill="#8b949e" font-family="Arial, sans-serif" font-size="14">Generating via GitHub Actions</text>
-  <text x="24" y="108" fill="#58a6ff" font-family="Arial, sans-serif" font-size="13">Phantomn</text>
+  <text x="24" y="38" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Streak</text>
+  <text x="24" y="68" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Based on public push events</text>
+  <text x="24" y="104" fill="#58a6ff" font-family="Arial, sans-serif" font-size="28" font-weight="700">1</text>
+  <text x="24" y="126" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Current days</text>
+  <text x="150" y="104" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20" font-weight="700">1</text>
+  <text x="150" y="126" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Longest run</text>
 </svg>
