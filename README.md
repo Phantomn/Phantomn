@@ -62,8 +62,3 @@
     </td>
   </tr>
 </table>
-
-## 연락처
-- 포트폴리오: https://ph4nt0mm.notion.site
-- X: https://twitter.com/Ph4nt0mm
-- 이메일: newbiepwner@kakao.com
