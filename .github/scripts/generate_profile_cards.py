@@ -70,36 +70,41 @@ def render_stats(user, repos):
         '<text x="24" y="38" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Stats</text>',
         f'<text x="24" y="68" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Updated {svg_escape(updated)}</text>',
     ]
-    labels = [
+    metrics = [
         ("Public Repos", str(public_repos)),
         ("Followers", str(followers)),
         ("Following", str(following)),
         ("Repo Stars", str(stars)),
     ]
-    y = 98
-    for label, value in labels:
-        lines.append(f'<text x="24" y="{y}" fill="#58a6ff" font-family="Arial, sans-serif" font-size="12">{svg_escape(label)}</text>')
-        lines.append(f'<text x="180" y="{y}" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="12" font-weight="700">{svg_escape(value)}</text>')
-        y += 18
+    card_w = 214
+    card_h = 36
+    positions = [(24, 86), (257, 86), (24, 126), (257, 126)]
+    for (label, value), (x, y) in zip(metrics, positions):
+        lines.append(f'<rect x="{x}" y="{y}" width="{card_w}" height="{card_h}" rx="8" fill="#161b22" stroke="#30363d" />')
+        lines.append(f'<text x="{x + 12}" y="{y + 14}" fill="#58a6ff" font-family="Arial, sans-serif" font-size="11">{svg_escape(label)}</text>')
+        lines.append(f'<text x="{x + 12}" y="{y + 28}" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="15" font-weight="700">{svg_escape(value)}</text>')
     return "\n  ".join(lines)
 
 
 def render_langs(lang_totals):
     total = sum(lang_totals.values()) or 1
-    top = sorted(lang_totals.items(), key=lambda kv: kv[1], reverse=True)[:5]
+    top = sorted(lang_totals.items(), key=lambda kv: kv[1], reverse=True)[:3]
     lines = [
         '<text x="24" y="38" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20" font-weight="700">Top Languages</text>',
-        f'<text x="24" y="68" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">By bytes across public repositories</text>',
+        f'<text x="24" y="68" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">By repository count across public repositories</text>',
     ]
     y = 92
-    for lang, bytes_ in top:
-        pct = bytes_ / total
-        bar_w = int(260 * pct)
+    palette = ["#58a6ff", "#8b949e", "#c9d1d9", "#7ee787", "#f2cc60"]
+    for idx, (lang, count) in enumerate(top):
+        pct = count / total
+        bar_w = int(242 * pct)
+        color = palette[idx % len(palette)]
         lines.append(f'<text x="24" y="{y}" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="12">{svg_escape(lang)}</text>')
-        lines.append(f'<rect x="110" y="{y-10}" width="260" height="10" rx="5" fill="#161b22" stroke="#30363d" />')
-        lines.append(f'<rect x="110" y="{y-10}" width="{max(bar_w, 6)}" height="10" rx="5" fill="#58a6ff" />')
-        lines.append(f'<text x="382" y="{y}" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">{pct*100:.1f}%</text>')
+        lines.append(f'<rect x="110" y="{y-10}" width="242" height="10" rx="5" fill="#161b22" stroke="#30363d" />')
+        lines.append(f'<rect x="110" y="{y-10}" width="{max(bar_w, 6)}" height="10" rx="5" fill="{color}" />')
+        lines.append(f'<text x="374" y="{y}" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">{pct*100:.1f}%</text>')
         y += 20
+    lines.append(f'<text x="24" y="158" fill="#8b949e" font-family="Arial, sans-serif" font-size="11">Total repositories analyzed: {sum(lang_totals.values()):,}</text>')
     return "\n  ".join(lines)
 
 
@@ -110,6 +115,8 @@ def render_streak(days_with_push: set[dt.date]):
     while cursor in days_with_push:
         streak += 1
         cursor -= dt.timedelta(days=1)
+    if streak < 2:
+        streak = 0
     longest = 0
     run = 0
     if days_with_push:
@@ -125,30 +132,29 @@ def render_streak(days_with_push: set[dt.date]):
         longest = max(longest, run)
     lines = [
         '<text x="24" y="38" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20" font-weight="700">GitHub Streak</text>',
-        f'<text x="24" y="68" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Based on public push events</text>',
-        '<text x="24" y="104" fill="#58a6ff" font-family="Arial, sans-serif" font-size="28" font-weight="700">{}</text>'.format(streak),
-        '<text x="24" y="126" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Current days</text>',
-        '<text x="150" y="104" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="20" font-weight="700">{}</text>'.format(longest),
-        '<text x="150" y="126" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Longest run</text>',
+        f'<text x="24" y="68" fill="#8b949e" font-family="Arial, sans-serif" font-size="12">Only consecutive push days count; 1-day runs are ignored</text>',
+        '<rect x="24" y="84" width="206" height="56" rx="10" fill="#161b22" stroke="#30363d" />',
+        '<rect x="256" y="84" width="206" height="56" rx="10" fill="#161b22" stroke="#30363d" />',
+        f'<text x="40" y="107" fill="#58a6ff" font-family="Arial, sans-serif" font-size="11">Current streak</text>',
+        f'<text x="40" y="131" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="24" font-weight="700">{streak}</text>',
+        f'<text x="272" y="107" fill="#58a6ff" font-family="Arial, sans-serif" font-size="11">Best streak</text>',
+        f'<text x="272" y="131" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="24" font-weight="700">{longest}</text>',
     ]
     return "\n  ".join(lines)
 
 
 def main():
     user = github_get(f"/users/{USERNAME}")
-    repos = paginated_get(f"/users/{USERNAME}/repos?type=owner&sort=updated&direction=desc", limit_pages=10)
+    repos = paginated_get(f"/users/{USERNAME}/repos?type=owner&sort=updated&direction=desc", limit_pages=2)
     repos = [r for r in repos if not r.get("fork")]
 
     lang_totals = defaultdict(int)
-    for repo in repos[:100]:
-        try:
-            langs = github_get(repo["languages_url"])
-        except Exception:
-            continue
-        for lang, bytes_ in langs.items():
-            lang_totals[lang] += int(bytes_)
+    for repo in repos:
+        lang = repo.get("language")
+        if lang:
+            lang_totals[lang] += 1
 
-    events = paginated_get(f"/users/{USERNAME}/events/public", limit_pages=10)
+    events = paginated_get(f"/users/{USERNAME}/events/public", limit_pages=4)
     push_days = set()
     cutoff = dt.date.today() - dt.timedelta(days=365)
     for event in events:
