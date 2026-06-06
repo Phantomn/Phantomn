@@ -11,27 +11,15 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PROFILE_USERNAME: Phantomn
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Generate profile cards
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p profile
-
-          curl -fsSL --retry 3 --retry-delay 5 \
-            "https://github-readme-stats.vercel.app/api?username=Phantomn&show_icons=true&count_private=true&hide_border=true&theme=transparent" \
-            -o profile/stats.svg
-
-          curl -fsSL --retry 3 --retry-delay 5 \
-            "https://github-readme-stats.vercel.app/api/top-langs/?username=Phantomn&layout=compact&hide_border=true&theme=transparent" \
-            -o profile/top-langs.svg
-
-          curl -fsSL --retry 3 --retry-delay 5 \
-            "https://streak-stats.demolab.com/?user=Phantomn&hide_border=true&theme=transparent" \
-            -o profile/streak.svg
+        run: python .github/scripts/generate_profile_cards.py
 
       - name: Commit generated cards
         shell: bash
